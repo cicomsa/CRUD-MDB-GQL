@@ -2,7 +2,7 @@ const express = require('express')
 const cors = require('cors')
 const graphqlHTTP = require('express-graphql')
 const mongoose = require('mongoose')
-const schema = require('./schema')
+const schema = require('./schema/post')
 const root = require('./roots/post')
 
 const mongoDB = 'mongodb://127.0.0.1:27017/test'
