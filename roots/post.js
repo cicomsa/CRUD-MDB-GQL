@@ -1,11 +1,11 @@
-const Post = require('../models/post')
+import Post from '../models/post'
 
 const getPosts = () => Post.find({})
 
 const getPost = id => Post.findById(id)
 
 const addPost = args => {
-  const post = new POSTS(args)
+  const post = new Post(args)
   return post.save()
 }
 
@@ -21,4 +21,4 @@ const root = {
   deletePost: ({ id }) => deletePost(id)
 }
 
-module.exports = root
+export default root

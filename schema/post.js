@@ -1,6 +1,6 @@
 
-const { buildASTSchema } = require('graphql')
-const gql = require('graphql-tag')
+import { buildASTSchema } from 'graphql'
+import gql from 'graphql-tag'
 
 const schema = buildASTSchema(gql`
   type Query {
@@ -26,4 +26,4 @@ const schema = buildASTSchema(gql`
   }
 `)
 
-module.exports = schema
+export default schema

@@ -1,9 +1,9 @@
-const express = require('express')
-const cors = require('cors')
-const graphqlHTTP = require('express-graphql')
-const mongoose = require('mongoose')
-const schema = require('./schema/post')
-const root = require('./roots/post')
+import express from 'express'
+import cors from 'cors'
+import graphqlHTTP from 'express-graphql'
+import mongoose from 'mongoose'
+import schema from './schema/post'
+import root from './roots/post'
 
 const mongoDB = 'mongodb://127.0.0.1:27017/test'
 
