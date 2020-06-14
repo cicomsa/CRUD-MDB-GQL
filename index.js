@@ -16,7 +16,7 @@ mongoose.connection
   .once('open', () => console.log('Connected to database'))
   .on('error', error => console.log(`Error: ${error.message}`))
 
-const app = express();
+const app = express()
 
 app.use(cors())
 
