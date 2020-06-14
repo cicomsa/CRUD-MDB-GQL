@@ -1,6 +1,6 @@
 
-const { buildASTSchema } = require('graphql');
-const gql = require('graphql-tag');
+const { buildASTSchema } = require('graphql')
+const gql = require('graphql-tag')
 
 const schema = buildASTSchema(gql`
   type Query {
@@ -24,6 +24,6 @@ const schema = buildASTSchema(gql`
     author: String!
     body: String!
   }
-`);
+`)
 
 module.exports = schema

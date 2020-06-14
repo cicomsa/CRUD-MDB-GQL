@@ -1,12 +1,11 @@
-const express = require('express');
-const cors = require('cors');
+const express = require('express')
+const cors = require('cors')
 const graphqlHTTP = require('express-graphql')
-const mongoose = require('mongoose');
-
+const mongoose = require('mongoose')
 const schema = require('./schema')
 const root = require('./roots/post')
 
-const mongoDB = 'mongodb://127.0.0.1:27017/test';
+const mongoDB = 'mongodb://127.0.0.1:27017/test'
 
 mongoose.connect(mongoDB, {
   useNewUrlParser: true,
@@ -14,18 +13,18 @@ mongoose.connect(mongoDB, {
 })
 
 mongoose.connection
-  .once('open', () => console.log('connected to database'))
+  .once('open', () => console.log('Connected to database'))
   .on('error', error => console.log(`Error: ${error.message}`))
 
 const app = express();
 
-app.use(cors());
+app.use(cors())
 
 app.use('/graphql', graphqlHTTP({
   schema,
   rootValue: root,
   graphiql: true,
-}));
+}))
 
 const port = process.env.PORT || 4000
 
